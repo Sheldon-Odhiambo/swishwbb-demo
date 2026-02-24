@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@400;500;600;700;900&family=Permanent+Marker&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Oswald", ui-sans-serif, system-ui, sans-serif;
+  --font-artistic: "Permanent Marker", cursive, sans-serif;
+  --color-cherry: #E31837;
+  --color-noir: #0F0F0F;
+  --color-swish-blue: #4A90E2;
+}
+
+body {
+  background-color: var(--color-noir);
+  color: white;
+}
+
+.text-hollow {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+}
+
+.text-hollow-cherry {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--color-cherry);
+}
+
+.text-hollow-noir {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--color-noir);
+}
+
+.text-filled {
+  -webkit-text-fill-color: currentColor;
+  -webkit-text-stroke-width: 0px;
+}
+
+@media (max-width: 768px) {
+  .text-hollow, .text-hollow-cherry, .text-hollow-noir {
+    -webkit-text-stroke-width: 1px;
+  }
+}
+
+.bg-jersey-black {
+  background-color: var(--color-noir);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 2px,
+    transparent 2px,
+    transparent 20px,
+    rgba(227, 24, 55, 0.05) 20px,
+    rgba(227, 24, 55, 0.05) 22px,
+    transparent 22px,
+    transparent 40px
+  );
+}
+
+.bg-jersey-red {
+  background-color: var(--color-cherry);
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M30 30L0 0h60L30 30zM30 30L0 60V0l30 30zm0 0l30 30H0l30-30zm0 0l30-30v60L30 30z' stroke='%23ffffff' stroke-width='1' stroke-opacity='0.15'/%3E%3C/g%3E%3C/svg%3E");
+}
